@@ -33,6 +33,7 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
+    background-color: var(--neutral-grey-100);
 }
 .card{
     display: flex;
@@ -90,7 +91,7 @@ body{
     background-color: var(--primary-purple-500);
     background-image: url(./assets/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-position: 90% 0%;
+    background-position: 80% 0%;
 }
 .deniel-description{
     color: var(--primary-purple-50);
@@ -106,6 +107,7 @@ body{
 }
 .kira-container, .jeanette-container{
     color: var(--neutral-grey-400);
+    background-color: var(--neutral-white);
 }
 .patrick-container{
     background-color: var(--neutral-grey-500);

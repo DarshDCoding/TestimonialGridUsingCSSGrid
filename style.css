@@ -29,8 +29,12 @@
     --font-bold:600;
 }
 
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
 .card{
-    margin: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -40,7 +44,9 @@
     border-radius: 0.5rem;
     font-family: var(--our-font);
     color: var(--neutral-white);
-    box-shadow: 20px 30px 30px var(--neutral-grey-200);
+    box-shadow: 20px 20px 20px var(--neutral-grey-200);
+
+    /* transition: all 1s ease-in-out; */
 }
 .profile-info{
     display: flex;
@@ -113,3 +119,75 @@
 .main-text p{
     line-height: 2rem;
 }
+
+
+/* NOW THE GRID SHITTTT */
+
+.testimonial-grid{
+    display: grid;
+    gap:2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+    padding-block: 2rem; 
+    width: min(95%, 80rem);
+    margin-inline: auto;
+}
+.card-purple{
+    grid-area: one;
+}
+.card-jonathan{
+    grid-area: two;
+}
+.jeanette-container{
+    grid-area: three;
+}
+.patrick-container{
+    grid-area: four;
+}
+.kira-container{
+grid-area: five;
+}
+
+
+/* .card:hover{
+    position: absolute;
+    z-index: 100;
+    width: 50vw;
+    scale: 1.1;
+    box-shadow: 0px 0px 20px red;
+} */
+
+@media (min-width:30em){
+.testimonial-grid{
+    grid-template-areas: 
+    "one one"
+    "two five"
+    "three five"
+    "four four";
+}
+}
+
+@media (min-width:50em){
+    /* .testimonial-grid{
+        grid-template-columns:repeat(4, 1fr);
+    }
+    .testimonial:last-child{
+    grid-column-start: 4;
+    grid-row: 1/ span 2;
+}
+.grid-col-span-2{
+    grid-column: span 2;
+} */
+.testimonial-grid{
+    grid-template-areas: 
+    "one one two five"
+    "three four four five";
+}
+}
+
+
